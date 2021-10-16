@@ -31,7 +31,7 @@ const experts= [
 
 const Experts = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" id="experts">
             <h3 className="text-center py-4">Our Experts</h3>
             <Row xs={1} md={4} className="g-3 mt-3">
                 {

@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch,Route } from'react-router-dom';
 import NotFound from './Pages/NotFound/NotFound';
 import Booking from './Pages/Booking/Booking/Booking';
 import Header from './Pages/Shared/Header/Header';
+import Login from './Pages/Login/Login/Login';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route path='/booking/:serviceId'>
                <Booking></Booking>
+            </Route>
+            <Route path='/login'>
+               <Login></Login>
             </Route>
             <Route path='*'>
                <NotFound></NotFound>
