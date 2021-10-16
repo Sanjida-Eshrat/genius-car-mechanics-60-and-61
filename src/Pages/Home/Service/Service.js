@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, Col , Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Service = (props) => {
-    const {title,price,description,img} = props.service;
+    const {id,title,price,description,img} = props.service;
     return (
         <div>
             <Col>
@@ -12,7 +13,9 @@ const Service = (props) => {
                         <Card.Title>{title.slice(0,25)}</Card.Title>
                         <Card.Text>{description}</Card.Text>
                         <Card.Text>Price: $ {price}</Card.Text>
-                        <Button variant="dark">Details</Button>{' '}
+                        <Link to={`/booking/${id}`}>
+                            <Button variant="dark">Book {title.toLowerCase()}</Button>
+                        </Link>
                     </Card.Body>
                 </Card>
             </Col>
